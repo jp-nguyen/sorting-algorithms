@@ -10,22 +10,36 @@ the sorts are applied onto the inputs. Each sort will be done on randomized
 input.
 
 # Tech/Framework Used
-**Build with C++ and ...**
+**Build with:**
+- C++
+    - ctime
+    - iostream
+- Python
+    - matplotlib
+    - numpy
+- LaTeX
+- Bash
 
 # Features
-The project can sort an input of *TDB* with the following:
+The project can sort a vector of *n* integers with the following:
 - Bubble Sort
 - Insertion Sort
 - Spin-the-Bottle Sort
-- Shell Sort with ...
-- Shell Sort with ...
-- Annealing Sort with ...
-- Annealing Sort with ...
+- Shell Sort with modifiable parameters
+- Annealing Sort with modifiable parameters
 
 In addition, the project comes with these features:
 - generator for randomized input
 - timer to test sorted input
+- functions to graph out the data
 - a report with analysis on sorting algorithm performance
 
 # How to use?
 TODO
+
+# TODO
+- implement timing
+- implement random input generation
+- implement sorts
+- implement graphing data
+- implement report

@@ -1,0 +1,17 @@
+PWD /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.tex
+OUTPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.log
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+INPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.aux
+INPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.aux
+OUTPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.aux
+OUTPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.pdf
+INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/jpnguyen/Documents/UCI/2018-2019/Quarter3/CS165/projects/cs-165-project-one/report/report.aux
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
