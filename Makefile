@@ -1,11 +1,21 @@
-CXXFLAGS=-std=c++11 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-constant
+SRCDIR := src
+BUILDDIR := build
+TARGET := bin/main
+ 
+SRCEXT := cpp
+SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
+OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+CFLAGS=-ggdb -std=c++11 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-constant
+INC := -I include
 
-FILES=bubble_sort.cpp main.cpp
+$(TARGET): $(OBJECTS)
+	@echo " Linking..."
+	g++ $^ -o $(TARGET)
 
-main: $(FILES) 
-	@echo ----- creating executable main from main.cpp -----
-	g++ -ggdb $(CXXFLAGS) $(FILES) -o main
+$(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
+	@mkdir -p $(BUILDDIR)
+	g++ $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
-	@echo ----- removing executables and possible cores -----
-	/bin/rm -rf main.dSYM main *.o *core*
+	@echo " Cleaning..."; 
+	/bin/rm -r $(BUILDDIR) $(TARGET)
