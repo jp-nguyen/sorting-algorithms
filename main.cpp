@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cassert>
 #include <ctime>
+#include "project1.h"
 using namespace std;
 
 struct timing {
@@ -17,27 +18,6 @@ vector<int> get_random_input(int n) {
         input[i] = i;
     random_shuffle(input.begin(), input.end()); 
     return input;
-}
-
-inline void swap(int &i, int&j) {
-    int temp = i;
-    i = j;
-    j = temp;
-}
-
-void bubble_sort(vector<int> & input) {
-    int n = input.size();
-    bool noSwaps = false;;
-
-    for (int i = 1; i < n && !noSwaps; ++i) {
-        noSwaps = true;
-        for (int j = 0; j < n - i; ++j) {
-            if (input[j] > input[j + 1]) {      
-                noSwaps = false;
-                swap(input[j], input[j + 1]);
-            }
-        }
-    }
 }
 
 timing time_sort(int n, int reps) {
