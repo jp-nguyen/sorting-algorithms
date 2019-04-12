@@ -5,7 +5,7 @@ TARGET := bin/main
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CFLAGS=-ggdb -std=c++11 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-constant
+CFLAGS=-ggdb -std=c++14 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-constant
 INC := -I include
 
 $(TARGET): $(OBJECTS)
@@ -18,4 +18,4 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 
 clean:
 	@echo " Cleaning..."; 
-	/bin/rm -r $(BUILDDIR) $(TARGET)
+	/bin/rm -rf $(BUILDDIR) $(TARGET)

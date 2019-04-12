@@ -1,3 +1,6 @@
+#ifndef PROJECT1_H
+#define PROJECT1_H
+
 #include <vector>
 
 //REQUIREMENTS:
@@ -11,3 +14,5 @@ void insertion_sort(std::vector<int>& nums);
 void spin_the_bottle_sort(std::vector<int>& nums);
 void shell_sort(std::vector<int>& nums, const std::vector<int>& gaps);
 void annealing_sort(std::vector<int>& nums, const std::vector<int>& temps, const std::vector<int>& reps);
+
+#endif

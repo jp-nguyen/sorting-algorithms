@@ -1,9 +1,9 @@
-#include "project1.h"
-#include "utils.h"
+#include "../include/project1.h"
+#include "../include/utils.h"
 
 void bubble_sort(std::vector<int>& nums) {
     int n = nums.size();
-    bool noSwaps = false;;
+    bool noSwaps = false;
 
     for (int i = 1; i < n && !noSwaps; ++i) {
         noSwaps = true;

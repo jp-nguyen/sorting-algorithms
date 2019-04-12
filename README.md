@@ -12,8 +12,12 @@ input.
 # Tech/Framework Used
 **Build with:**
 - C++
+    - cmath
     - ctime
     - iostream
+    - ifstream
+    - random
+    - vector
 - Python
     - matplotlib
     - numpy

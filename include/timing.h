@@ -6,8 +6,10 @@
 #define TIMING_H
 
 #include <ctime>
+#include <cassert>
 #include "project1.h"
-#include "generate.h"
+#include "random_generation.h"
+#include "utils.h"
 using namespace std;
 
 struct timing {
@@ -15,19 +17,8 @@ struct timing {
     double seconds; 
 };
 
-timing time_sort(void (*sort_func)(vector<int>&), int n, int reps) {
-    vector<int> nums = get_random_input(n);
-    double total_time = 0;
-
-    for (int i = 0; i < reps; ++i) {
-        clock_t start = clock();
-        (*sort_func)(nums);
-        clock_t end = clock();
-        total_time += (float) (end - start) / CLOCKS_PER_SEC;
-    }
-    double seconds = (float) total_time / reps;
-
-    return {n, seconds};
-}
+timing time_sort(void (*sort_func)(vector<int>&), int n, int reps, bool almostSorted);
+timing time_annealing_sort(int n, int reps);
+timing time_shell_sort(int n, int reps);
 
 #endif
