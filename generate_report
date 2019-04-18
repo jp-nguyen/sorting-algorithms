@@ -1,0 +1,28 @@
+#! /bin/sh
+
+print_line() {
+    echo "--------------------------------------------"
+}
+if [ $# -ne 0 ]; then
+    echo "generate_report: takes no arguments" >&2; exit 1
+fi
+
+echo "...clearing out past execution/object files..."
+print_line
+make clean
+print_line
+
+echo "...building the time_sorts program..."
+print_line
+make
+print_line
+
+echo "...running the time_sorts program..."
+print_line
+bin/time_sorts
+print_line
+
+echo "...running the create_graphs program..."
+print_line
+python bin/create_graphs.py "timings.csv"
+print_line

@@ -1,6 +1,6 @@
 SRCDIR := src
 BUILDDIR := build
-TARGET := bin/main
+TARGET := bin/time_sorts
  
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
@@ -9,7 +9,6 @@ CFLAGS=-ggdb -std=c++14 -Wpedantic -Wall -Wextra -Werror -Wzero-as-null-pointer-
 INC := -I include
 
 $(TARGET): $(OBJECTS)
-	@echo " Linking..."
 	g++ $^ -o $(TARGET)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
@@ -17,5 +16,4 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	g++ $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
-	@echo " Cleaning..."; 
-	/bin/rm -rf $(BUILDDIR) $(TARGET)
+	/bin/rm -rf $(BUILDDIR) $(TARGET) timings.csv
