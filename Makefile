@@ -16,4 +16,4 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	g++ $(CFLAGS) $(INC) -c -o $@ $<
 
 clean:
-	/bin/rm -rf $(BUILDDIR) $(TARGET) timings.csv
+	/bin/rm -rf $(BUILDDIR) $(TARGET)
