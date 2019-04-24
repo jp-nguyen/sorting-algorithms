@@ -8,6 +8,7 @@
 #include <ctime>
 #include <cassert>
 #include <fstream>
+#include <algorithm>
 #include "project1.h"
 #include "random_generation.h"
 #include "utils.h"
@@ -20,8 +21,10 @@ struct timing {
 
 void create_empty_timings_sheet(string filename);
 void add_timing_to_sheet(string filename, string sort_func, timing t);
-timing time_sort(void (*sort_func)(vector<int>&), int n, int reps, bool almostSorted);
-timing time_annealing_sort(int n, int reps);
-timing time_shell_sort(int n, int reps);
+void print_timing(timing t);
+timing time_sort(void (*sort_func)(vector<int>&), int n, int reps, bool fullyRandom);
+timing time_spin_the_bottle_sort(int n, int reps, bool fullyRandom);
+timing time_shell_sort(int n, int reps, bool fullyRandom, int seq);
+timing time_annealing_sort(int n, int reps, bool fullyRandom, int seq);
 
 #endif

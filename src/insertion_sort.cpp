@@ -1,5 +1,5 @@
-#include "../include/project1.h"
-#include "../include/utils.h"
+#include "project1.h"
+#include "utils.h"
 
 void insertion_sort(std::vector<int>& nums) {
     int key, j, n = nums.size();
