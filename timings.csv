@@ -1,13 +1,2 @@
 sort,n,seconds
-bubble,10,2.33333e-06
-bubble,100,1.63333e-05
-bubble,1000,0.00127633
-bubble,10000,0.143474
-insertion,10,6.66667e-07
-insertion,100,7.66667e-06
-insertion,1000,0.000573
-insertion,10000,0.040152
-spin the bottle,10,0.000581
-spin the bottle,100,0.070584
-spin the bottle,1000,10.4657
-spin the bottle,10000,1554.06
+annealing0,10,0.000569

@@ -5,41 +5,51 @@
 #include "../include/random_generation.h"
 using namespace std;
 
-void test_bubble_sort(string filename) {
-    cout << "...testing bubble sort..." << endl;
-    for (int n = 10; n < 100000; n *= 10) {
-        timing t = time_sort(&bubble_sort, n, 3, true);
-        add_timing_to_sheet(filename, "bubble", t);
+void test_sort(string sort_name, void (*sort_func)(vector<int>&), int limit, string filename) {
+    cout << "...testing " << sort_name << " sort..." << endl;
+    for (int n = 10; n <= limit; n *= 10) {
+        timing t = time_sort(sort_func, n, 3, true);
+        add_timing_to_sheet(filename, sort_name, t);
         cout << "Sorted " << t.n << " items in " << t.seconds << " seconds" << endl;
     }
-    cout << "...finished bubble sort..." << endl;
+    cout << "...finished " << sort_name << " sort..." << endl;
 }
 
-void test_insertion_sort(string filename) {
-    cout << "...testing insertion sort..." << endl;
-    for (int n = 10; n < 100000; n *= 10) {
-        timing t = time_sort(&insertion_sort, n, 3, true);
-        add_timing_to_sheet(filename, "insertion", t);
-        cout << "Sorted " << t.n << " items in " << t.seconds << " seconds" << endl;
+void test_shell_sort(int limit, string filename) {
+    for (int i = 0; i < 2; ++i) {
+        cout << "...testing shell sort " << i << "..." << endl;
+        for (int n = 10; n <= limit; n *= 10) {
+            timing t = time_shell_sort(n, 5, true, i);
+            string sort = "shell";
+            sort += '0' + i;
+            add_timing_to_sheet(filename, sort, t);
+            cout << "Sorted " << t.n << " items in " << t.seconds << " seconds" << endl;
+        }
+        cout << "...finished shell sort " << i << "..." << endl;
     }
-    cout << "...finished insertion sort..." << endl;
 }
 
-void test_spin_the_bottle_sort(string filename) {
-    cout << "...testing spin the bottle sort..." << endl;
-    for (int n = 10; n < 100000; n *= 10) {
-        timing t = time_sort(&spin_the_bottle_sort, n, 1, true);
-        add_timing_to_sheet(filename, "spin the bottle", t);
-        cout << "Sorted " << t.n << " items in " << t.seconds << " seconds" << endl;
+void test_annealing_sort(int limit, string filename) {
+    for (int i = 0; i < 2; ++i) {
+        cout << "...testing annealing sort " << i << "..." << endl;
+        for (int n = 10; n <= limit; n *= 10) {
+            timing t = time_annealing_sort(n, 5, true, i);
+            string sort = "annealing";
+            sort += '0' + i;
+            add_timing_to_sheet(filename, sort, t);
+            cout << "Sorted " << t.n << " items in " << t.seconds << " seconds" << endl;
+        }
+        cout << "...finished annealing sort " << i << "..." << endl;
     }
-    cout << "...finished spin the bottle sort..." << endl;
 }
 
 int main() {
     string filename = "timings.csv";
     create_empty_timings_sheet(filename);
-    test_bubble_sort(filename);
-    test_insertion_sort(filename);
-    test_spin_the_bottle_sort(filename);
+    // test_sort("bubble", &bubble_sort, 100000, filename);
+    // test_sort("insertion", &insertion_sort, 100000, filename);
+    // test_sort("spin the bottle", &spin_the_bottle_sort, 1000, filename);
+    // test_shell_sort(100000, filename);
+    test_annealing_sort(100000, filename);
     return 0;
 }

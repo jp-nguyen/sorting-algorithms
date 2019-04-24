@@ -1,5 +1,5 @@
-#include "../include/project1.h"
-#include "../include/utils.h"
+#include "project1.h"
+#include "utils.h"
 
 void bubble_sort(std::vector<int>& nums) {
     int n = nums.size();
