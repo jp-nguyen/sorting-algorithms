@@ -1,0 +1,16 @@
+sort,n,seconds
+annealing 0,10,0.000905
+annealing 0,100,0.0580503
+annealing 0,1000,5.73475
+annealing 1,10,0.000391667
+annealing 1,100,0.051093
+annealing 1,1000,4.82083
+annealing 2,10,0.000223667
+annealing 2,100,0.043769
+annealing 2,1000,3.93344
+annealing 3,10,0.000282333
+annealing 3,100,0.0356583
+annealing 3,1000,3.75272
+annealing 4,10,0.000236333
+annealing 4,100,0.0280483
+annealing 4,1000,2.96095

@@ -1,0 +1,11 @@
+input,n,seconds
+nearly sorted,10,1.33333e-06
+nearly sorted,100,4e-06
+nearly sorted,1000,2.96667e-05
+nearly sorted,10000,0.000388
+nearly sorted,100000,0.00376867
+fully randomized,10,3.33333e-07
+fully randomized,100,1.73333e-05
+fully randomized,1000,0.00141033
+fully randomized,10000,0.106451
+fully randomized,100000,10.8947

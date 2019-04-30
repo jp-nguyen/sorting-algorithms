@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [[ "$#" -ne 1 ]]; then
+    echo Usage: $0 csv-file >&2 
+    exit 1
+fi
+
+python bin/create_graphs.py $1
+mv *.png report/images

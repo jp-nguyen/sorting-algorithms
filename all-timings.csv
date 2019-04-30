@@ -1,0 +1,65 @@
+sort,n,seconds
+bubble,10,2.66667e-06
+bubble,100,2.56667e-05
+bubble,1000,0.001945
+bubble,10000,0.169301
+bubble,100000,15.4216
+insertion,10,1.33333e-06
+insertion,100,4e-06
+insertion,1000,2.96667e-05
+insertion,10000,0.000388
+insertion,100000,0.00376867
+shell 0,10,1.66667e-06
+shell 0,100,2.53333e-05
+shell 0,1000,0.000690333
+shell 0,10000,0.0401673
+shell 0,100000,3.70179
+shell 1,10,3e-06
+shell 1,100,1.6e-05
+shell 1,1000,0.000823333
+shell 1,10000,0.0521097
+shell 1,100000,2.30307
+spin the bottle,10,0.000317333
+spin the bottle,100,0.0818967
+spin the bottle,1000,14.092
+spin the bottle,10000,1712.16
+annealing 0,10,0.000507
+annealing 0,100,0.0371577
+annealing 0,1000,3.72279
+annealing 0,10000,364.779
+annealing 1,10,0.000489333
+annealing 1,100,0.030418
+annealing 1,1000,2.95359
+annealing 1,10000,299.786
+bubble,10,1.66667e-06
+bubble,100,5.23333e-05
+bubble,1000,0.003798
+bubble,10000,0.409131
+bubble,100000,42.78
+insertion,10,3.33333e-07
+insertion,100,1.73333e-05
+insertion,1000,0.00141033
+insertion,10000,0.106451
+insertion,100000,10.8947
+shell 0,10,2e-06
+shell 0,100,4.03333e-05
+shell 0,1000,0.001695
+shell 0,10000,0.106047
+shell 0,100000,12.0835
+shell 1,10,2.33333e-06
+shell 1,100,3.73333e-05
+shell 1,1000,0.00201667
+shell 1,10000,0.129221
+shell 1,100000,11.5812
+spin the bottle,10,0.000317
+spin the bottle,100,0.0840107
+spin the bottle,1000,12.7884
+spin the bottle,10000,1554.8
+annealing 0,10,0.000271
+annealing 0,100,0.036989
+annealing 0,1000,3.66253
+annealing 0,10000,359.78
+annealing 1,10,0.000465333
+annealing 1,100,0.0296267
+annealing 1,1000,2.87479
+annealing 1,10000,286.526
