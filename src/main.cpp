@@ -31,7 +31,7 @@ void test_shell_sort(int limit, bool fullyRandom, string filename) {
     for (int i = 0; i < 2; ++i) {
         cout << "...testing shell sort " << i << "..." << endl;
         for (int n = 10; n <= limit; n *= 10) {
-            timing t = time_shell_sort(n, 3, fullyRandom,  i);// seq[i]);
+            timing t = time_shell_sort(n, 3, fullyRandom, seq[i]);
             string sort = "shell ";
             sort += '0' + i;
             add_timing_to_sheet(filename, sort, t);
